@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: #c6c6c6;
+}
+
+.wrap {
+    background-color: white;
+    width: 375px;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.instagram {
+    width: 100%;
+    height: 550px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 375px 1fr;
+    grid-template-areas:
+    "header"
+    "image"
+    "footer";
+
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.header {
+    grid-area: header;
+    margin: 5px 10px;
+    font-weight: bold;
+}
+
+.header-left {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.header-image {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header-right {
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-menu {
+    cursor: pointer;
+    user-select: none;
+    padding-bottom: 2px;
+}
+
+.image {
+    clear: both;
+
+    grid-area: image;
+    background-image: url(./img/profile.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer {
+    grid-area: footer;
+    margin: 0 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto auto;
+    grid-template-areas:
+    "top-left top-center top-right"
+    "likes likes likes"
+    "comments comments comments";
+}
+
+.top-left {
+    grid-area: top-left;
+    display: flex;
+    font-size: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-center {
+    grid-area: top-center;
+    margin: 0 20px;
+}
+
+.top-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.top-list-item {
+    width: 7px;
+    height: 7px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+.list-item-focused {
+    background-color: skyblue;
+}
+
+.top-right {
+    grid-area: top-right;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.likes {
+    grid-area: likes;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.comments {
+    grid-area: comments;
+    font-size: 10px;
+}
